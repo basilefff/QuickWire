@@ -5,7 +5,7 @@ ApplicationWindow {
 	id: mainWindow
 	width: 1000
 	height: 700
-	visible: true
+	visible: systemTray.mainWindowVisible
 	title: qsTr("QuickWire")
 
 	menuBar: MenuBar {
@@ -17,5 +17,11 @@ ApplicationWindow {
 				onTriggered: mainWindow.close()
 			}
 		}
+	}
+
+	SystemTray {
+		id: systemTray
+
+		onQuit: mainWindow.close()
 	}
 }

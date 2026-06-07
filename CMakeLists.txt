@@ -16,6 +16,7 @@ qt_add_qml_module(appQuickWire
 	URI QuickWire
 	QML_FILES
 	Main.qml
+	SystemTray.qml
 )
 
 target_link_libraries(appQuickWire
