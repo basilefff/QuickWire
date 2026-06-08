@@ -21,8 +21,11 @@ qt_add_executable(appQuickWire
 qt_add_qml_module(appQuickWire
 	URI QuickWire
 	QML_FILES
-	Main.qml
-	SystemTray.qml
+		Main.qml
+		SystemTray.qml
+	SOURCES
+		pipewiremodel.h
+		pipewiremodel.cpp
 )
 
 target_link_libraries(appQuickWire
