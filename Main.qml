@@ -13,7 +13,7 @@ ApplicationWindow {
 			title: qsTr("&File")
 			Action {
 				text: "&Quit"
-				shortcut: "Ctrl-Q"
+				shortcut: "Ctrl+Q"
 				onTriggered: mainWindow.close()
 			}
 		}
