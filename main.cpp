@@ -1,9 +1,12 @@
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
 #include <QDebug>
+#include <pipewire/pipewire.h>
+#include "pipewiremodel.h"
 
 int main(int argc, char *argv[])
 {
+	pw_init(&argc, &argv);
 	QGuiApplication app(argc, argv);
 
 	QQmlApplicationEngine engine;
@@ -12,7 +15,9 @@ int main(int argc, char *argv[])
 	Qt::QueuedConnection);
 	engine.loadFromModule("QuickWire", "Main");
 
-	qDebug() << "Let's test the debug tools\n";
+	qDebug() << "Let's test the debug tools";
+
+	PipeWireModel model;
 
 	return app.exec();
 }

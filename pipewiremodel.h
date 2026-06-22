@@ -16,6 +16,7 @@ public:
 	QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
 
 private:
+	QList<QString> nodes;
 };
 
 #endif // PIPEWIREMODEL_H
