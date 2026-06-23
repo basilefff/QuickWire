@@ -24,4 +24,19 @@ ApplicationWindow {
 
 		onQuit: mainWindow.close()
 	}
+
+	ListView {
+		anchors.fill: parent
+		model: PipeWireModel {}
+		delegate: Rectangle {
+			required property string display
+			width: ListView.view.width
+			height: 30
+
+			Text {
+				anchors.fill: parent
+				text: parent.display
+			}
+		}
+	}
 }

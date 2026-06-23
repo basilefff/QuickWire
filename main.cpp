@@ -17,7 +17,5 @@ int main(int argc, char *argv[])
 
 	qDebug() << "Let's test the debug tools";
 
-	PipeWireModel model;
-
 	return app.exec();
 }

@@ -2,10 +2,12 @@
 #define PIPEWIREMODEL_H
 
 #include <QAbstractListModel>
+#include <QtQml/qqmlregistration.h>
 
 class PipeWireModel : public QAbstractListModel
 {
 	Q_OBJECT
+	QML_ELEMENT
 
 public:
 	explicit PipeWireModel(QObject *parent = nullptr);
